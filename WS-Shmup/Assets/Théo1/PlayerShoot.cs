@@ -10,12 +10,11 @@ public class PlayerShoot : MonoBehaviour
 
     PlayerChangeWeapon changeWeapon;
 
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefabBaseBallet;
     public Transform sockect;
 
     private string WeaponOnUse;
 
-    private Vector3 vector3 = new Vector3();
 
 
     private void Start()
@@ -31,7 +30,7 @@ public class PlayerShoot : MonoBehaviour
         switch (WeaponOnUse)
         {
             case "Arme1": //Utilisation de l'arme de base 
-                Instantiate(bulletPrefab, sockect.position, transform.rotation);
+                Instantiate(bulletPrefabBaseBallet, sockect.position, transform.rotation);
                 break;
 
             case "Arme2"://Utilisation du Fusils à pompe
