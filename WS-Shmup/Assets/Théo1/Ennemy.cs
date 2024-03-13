@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ennemy : MonoBehaviour
 {
-    private int _hp = 15;
+    private int _hp = 10;
 
     public void LowerHealth(int damage)
     {

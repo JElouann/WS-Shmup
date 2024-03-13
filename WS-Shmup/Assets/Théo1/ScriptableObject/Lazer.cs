@@ -1,22 +1,21 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class BaseBullet : BulletMain
+public class Lazer : MonoBehaviour
 {
     public SO_Bullet weapon;
 
-    private float bullet_speed;
     private float _lifeTime;
+    private float damage;
 
     public Rigidbody2D rigidbody2d;
 
     private void Start()
     {
-        bullet_speed = weapon.bullet_speed;
         damage = weapon.damage;
         _lifeTime = weapon.lifeTime;
 
-        rigidbody2d.AddForce(transform.up * bullet_speed);
         StartCoroutine(DestroyBullet(_lifeTime));
     }
 
@@ -24,5 +23,10 @@ public class BaseBullet : BulletMain
     {
         yield return new WaitForSeconds(lifeTime);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        collision.gameObject.SendMessage("LowerHealth", damage, SendMessageOptions.DontRequireReceiver);
     }
 }
