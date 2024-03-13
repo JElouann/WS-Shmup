@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Threading.Tasks;
@@ -46,9 +44,12 @@ public class PlayerShoot : MonoBehaviour
                 break;
 
             case "Arme2"://Utilisation du Fusils à pompe
-                if (IsShoot1 == true)
+                if (IsShoot1 == false)
                 {
-                    Debug.Log("Tu utilise Arme2");
+                    IsShoot1 = true;
+                    Instantiate(bulletPrefabShotgunBullet, sockect.position, transform.rotation);
+                    await Task.Delay(3000);
+                    IsShoot1 = false;
                 }
 
                 break;
