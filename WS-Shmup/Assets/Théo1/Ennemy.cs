@@ -8,11 +8,12 @@ public class Ennemy : MonoBehaviour
 
     public void LowerHealth(int damage)
     {
+        
         if (_hp > 0)
         {
             _hp -= damage;
         } 
-        else
+        if (_hp <= 0)
         {
             Destroy(gameObject);
         }

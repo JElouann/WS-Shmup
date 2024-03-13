@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotgunBullet : MonoBehaviour
+public class ShotgunBullet : BulletMain
 {
     public SO_Bullet weapon;
 
 
     private float bullet_speed;
-    private int damage;
     private float cooldown;
     private float _lifeTime;
 
@@ -30,17 +29,4 @@ public class ShotgunBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Wall")
-        {
-            Destroy(gameObject);
-        }
-
-        if (other.gameObject.tag == "Ennemy")
-        {
-            other.gameObject.SendMessage("LowerHealth", SendMessageOptions.DontRequireReceiver);
-            Destroy(gameObject);
-        }
-    }
 }
