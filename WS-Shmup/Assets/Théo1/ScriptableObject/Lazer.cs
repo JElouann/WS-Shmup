@@ -25,6 +25,7 @@ public class Lazer : MonoBehaviour
         Destroy(gameObject);
     }
 
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         collision.gameObject.SendMessage("LowerHealth", damage, SendMessageOptions.DontRequireReceiver);

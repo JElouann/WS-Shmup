@@ -12,6 +12,8 @@ public class PlayerShoot : MonoBehaviour
     PlayerChangeWeapon changeWeapon;
 
     public GameObject bulletPrefabBaseBullet;
+    public GameObject bulletPrefabShotgunBullet;
+    public GameObject bulletPrefabLazer;
     public GameObject bulletPrefabRocketLauncherBullet;
     public Transform sockect;
 
@@ -54,7 +56,10 @@ public class PlayerShoot : MonoBehaviour
             case "Arme3"://Utilisation du Laser
                 if (IsShoot2 == false)
                 {
-                    Debug.Log("Tu utilise Arme 3");
+                    IsShoot2 = true;
+                    Instantiate(bulletPrefabLazer, sockect.position, transform.rotation);
+                    await Task.Delay(3000);
+                    IsShoot2 = false;
                 }
                 break;
 
