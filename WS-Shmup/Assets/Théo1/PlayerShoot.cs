@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,25 +8,43 @@ public class PlayerShoot : MonoBehaviour
 
     InputAction _shoot;
 
-    private bool _PlayerOnShoot = false;
+    PlayerChangeWeapon changeWeapon;
+
+    public GameObject bulletPrefabBaseBallet;
+    public Transform sockect;
+
+    private string WeaponOnUse;
+
+
 
     private void Start()
     {
         _input = GetComponent<PlayerInput>();
         _shoot = _input.actions.FindAction("Shoot");
+        WeaponOnUse = changeWeapon.WeaponUse;
+        Debug.Log(WeaponOnUse);
     }
 
-    private void FixedUpdate()
+    private void OnShoot()
     {
-        if (_PlayerOnShoot == true)
+        switch (WeaponOnUse)
         {
-            _PlayerOnShoot=false;
-            Debug.Log("Tu tires");
-        }
-    }
+            case "Arme1": //Utilisation de l'arme de base 
+                Instantiate(bulletPrefabBaseBallet, sockect.position, transform.rotation);
+                break;
 
-    void OnShoot()
-    {
-        _PlayerOnShoot = true;
+            case "Arme2"://Utilisation du Fusils à pompe
+
+                break;
+
+            case "Arme3"://Utilisation du Laser
+
+                break;
+
+            case "Arme4"://Utilisation du Lance Roquettes
+
+                break;
+
+        }
     }
 }
