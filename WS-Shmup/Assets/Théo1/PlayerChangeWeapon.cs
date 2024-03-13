@@ -18,13 +18,13 @@ public class PlayerChangeWeapon : MonoBehaviour
         "Arme1", "Arme2", "Arme3", "Arme4"
     };
 
-    private void Start()
+    private void Awake()
     {
         _input = GetComponent<PlayerInput>();
         _change = _input.actions.FindAction("Shoot");
         _NbWeapons = Weapons.Count;
         WeaponUse = Weapons[_indice];
-        Debug.Log(Weapons[0]);
+        Debug.Log(WeaponUse);
     }
 
     void OnChangeWeapon()
@@ -34,12 +34,12 @@ public class PlayerChangeWeapon : MonoBehaviour
         {
             _indice = 0;
             WeaponUse = Weapons[_indice]; 
-             Debug.Log(Weapons[_indice]);
+             Debug.Log(WeaponUse);
         }
         else
         {
             WeaponUse = Weapons[_indice];
-            Debug.Log(Weapons[_indice]);
+            Debug.Log(WeaponUse);
         }   
     }
 }
