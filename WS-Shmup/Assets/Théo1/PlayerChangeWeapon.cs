@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerChangeWeapon : MonoBehaviour
 {
@@ -8,13 +10,15 @@ public class PlayerChangeWeapon : MonoBehaviour
 
     InputAction _change;
 
+    [SerializeField] private TextMeshProUGUI TextWeaponUse;
+
     private int _NbWeapons = 0;
     public string WeaponUse;
     private int _indice = 0;
 
     private List<string> Weapons = new List<string>
     {
-        "Arme1", "Arme2", "Arme3", "Arme4"
+        "Arme : 1", "Arme : 2", "Arme : 3", "Arme : 4"
     };
 
     private void Awake()
@@ -32,13 +36,13 @@ public class PlayerChangeWeapon : MonoBehaviour
         if (_indice == _NbWeapons)
         {
             _indice = 0;
-            WeaponUse = Weapons[_indice]; 
-             Debug.Log(WeaponUse);
+            WeaponUse = Weapons[_indice];
+            TextWeaponUse.text = WeaponUse;
         }
         else
         {
             WeaponUse = Weapons[_indice];
-            Debug.Log(WeaponUse);
+            TextWeaponUse.text = WeaponUse;
         }   
     }
 }

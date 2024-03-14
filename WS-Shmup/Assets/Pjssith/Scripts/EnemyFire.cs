@@ -14,7 +14,7 @@ public class EnemyFire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartFiring());;
+        StartCoroutine(StartFiring());
     }
 
     // Update is called once per frame
