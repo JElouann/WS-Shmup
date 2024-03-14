@@ -1063,7 +1063,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72ba0806b6406b4d9878be5662cee05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefabBaseBallet: {fileID: 880167914067651208, guid: 0e68702d5d7c2dc4885ca0dc7797435b, type: 3}
+  bulletPrefabBaseBullet: {fileID: 880167914067651208, guid: 0e68702d5d7c2dc4885ca0dc7797435b, type: 3}
   bulletPrefabRocketLauncherBullet: {fileID: 3289955426262388623, guid: e5850ea3673633b48ab151a3f3cdb9fa, type: 3}
   sockect: {fileID: 658377235}
 --- !u!114 &2132850858
@@ -1308,7 +1308,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
