@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   name: Shotgun
-  bullet_speed: 5
+  bullet_speed: 750
   cooldown: 10
   damage: 20
+  lifeTime: 0.6

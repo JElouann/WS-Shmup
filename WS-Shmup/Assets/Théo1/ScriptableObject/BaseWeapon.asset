@@ -15,5 +15,5 @@ MonoBehaviour:
   name: BaseWeapon
   bullet_speed: 1500
   cooldown: 0
-  damage: 5
+  damage: 15
   lifeTime: 0.75
