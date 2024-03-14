@@ -499,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 658377234}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.71, z: -0.09436605}
+  m_LocalPosition: {x: -0.01, y: 0.817, z: -0.09436605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1026,7 +1026,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1819944756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1230,6 +1230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefabBaseBullet: {fileID: 880167914067651208, guid: 0e68702d5d7c2dc4885ca0dc7797435b, type: 3}
+  bulletPrefabShotgunBullet: {fileID: 5477538306205805873, guid: bfb71df5451f8b2488eec19ee400fd47, type: 3}
+  bulletPrefabLazer: {fileID: 2775104164341560064, guid: f5e403c57a3f50444a04d1cff775fa93, type: 3}
   bulletPrefabRocketLauncherBullet: {fileID: 3289955426262388623, guid: e5850ea3673633b48ab151a3f3cdb9fa, type: 3}
   sockect: {fileID: 658377235}
 --- !u!114 &2132850858

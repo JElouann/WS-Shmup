@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShotgunBullet : BulletMain
@@ -29,4 +28,17 @@ public class ShotgunBullet : BulletMain
         Destroy(gameObject);
     }
 
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "Ennemy")
+        {
+            other.gameObject.SendMessage("LowerHealth", damage, SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject);
+        }
+    }
 }

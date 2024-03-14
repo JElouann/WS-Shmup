@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RocketBullet : MonoBehaviour
 {
 
-    private int _damage = 500;
+    private int _damage = 100;
     private float _lifeTime = 1;
 
     private void Start()

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3be53942cd8e2f44bbfd024dac8dea9, type: 3}
-  m_Name: BaseWeapon
+  m_Name: Lazer
   m_EditorClassIdentifier: 
-  name: BaseWeapon
-  bullet_speed: 1500
-  cooldown: 0
-  damage: 15
-  lifeTime: 0.75
+  name: 
+  bullet_speed: 0
+  cooldown: 2.5
+  damage: 5
+  lifeTime: 3

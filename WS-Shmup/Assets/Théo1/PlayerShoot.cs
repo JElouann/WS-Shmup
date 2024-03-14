@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Threading.Tasks;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -11,19 +10,18 @@ public class PlayerShoot : MonoBehaviour
     PlayerChangeWeapon changeWeapon;
 
     public GameObject bulletPrefabBaseBullet;
+    public GameObject bulletPrefabShotgunBullet;
+    public GameObject bulletPrefabLazer;
     public GameObject bulletPrefabRocketLauncherBullet;
     public Transform sockect;
 
     private string WeaponOnUse ;
 
     private bool IsShoot1 = false;
-    private float _cooldown1 = 1.5f;
 
     private bool IsShoot2 = false; 
-    private float _cooldown2 = 5f;
 
     private bool IsShoot3 = false;
-    private float _cooldown3 = 2.5f;
 
     private void Start()
     {
@@ -32,8 +30,8 @@ public class PlayerShoot : MonoBehaviour
         changeWeapon = gameObject.GetComponent<PlayerChangeWeapon>();
     }
 
-
-    private void OnShoot()
+    
+    private async void OnShoot()
     {
         WeaponOnUse = changeWeapon.WeaponUse;
         
@@ -46,38 +44,35 @@ public class PlayerShoot : MonoBehaviour
                 break;
 
             case "Arme2"://Utilisation du Fusils à pompe
-                if (IsShoot1 == true)
+                if (IsShoot1 == false)
                 {
-                    IsShoot3 = true;
-                    ///Instantiate(bulletPrefabShootGun, sockect.position, transform.rotation);
-                    StartCoroutine(OnCooldown(_cooldown3, IsShoot3));
+                    IsShoot1 = true;
+                    Instantiate(bulletPrefabShotgunBullet, sockect.position, transform.rotation);
+                    await Task.Delay(3000);
+                    IsShoot1 = false;
                 }
+
                 break;
 
             case "Arme3"://Utilisation du Laser
                 if (IsShoot2 == false)
                 {
                     IsShoot2 = true;
-                    Instantiate(bulletPrefabRocketLauncherBullet, sockect.position, transform.rotation);
-                    StartCoroutine(OnCooldown(_cooldown2, IsShoot2));
+                    Instantiate(bulletPrefabLazer, sockect.position, transform.rotation);
+                    await Task.Delay(3000);
+                    IsShoot2 = false;
                 }
                 break;
 
             case "Arme4"://Utilisation du Lance Roquettes
-                if (IsShoot3 == true)
+                if (IsShoot3 == false)
                 {
                     IsShoot3 = true;
-                    ///Instantiate(bulletPrefabLazer, sockect.position, transform.rotation);
-                    StartCoroutine(OnCooldown(_cooldown3, IsShoot3));
+                    Instantiate(bulletPrefabRocketLauncherBullet, sockect.position, transform.rotation);
+                    await Task.Delay(5000);
+                    IsShoot3 = false;
                 }
                 break;
-
         }
-    }
-
-    private IEnumerator OnCooldown(float CoolDownTime, bool IsShoot)
-    {
-        yield return new WaitForSeconds(CoolDownTime);
-        IsShoot = false;
     }
 }
