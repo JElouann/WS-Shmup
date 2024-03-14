@@ -59,7 +59,7 @@ public class PlayerShoot : MonoBehaviour
                 {
                     IsShoot2 = true;
                     Instantiate(bulletPrefabLazer, sockect.position, transform.rotation);
-                    await Task.Delay(3000);
+                    await Task.Delay(1000);
                     IsShoot2 = false;
                 }
                 break;
@@ -69,7 +69,7 @@ public class PlayerShoot : MonoBehaviour
                 {
                     IsShoot3 = true;
                     Instantiate(bulletPrefabRocketLauncherBullet, sockect.position, transform.rotation);
-                    await Task.Delay(5000);
+                    await Task.Delay(7000);
                     IsShoot3 = false;
                 }
                 break;

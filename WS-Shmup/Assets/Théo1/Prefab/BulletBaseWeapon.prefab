@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 880167914067651208}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.49, y: -12.51, z: 0}
-  m_LocalScale: {x: 0.3296, y: 0.5977, z: 1}
+  m_LocalPosition: {x: 8.5175, y: -12.51, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.992851, g: 1, b: 0.033018887, a: 1}
+  m_Sprite: {fileID: 730058525, guid: f90f848611fa5ba4f9bf2da00f5efdd0, type: 3}
+  m_Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2470ab6e6c1ee20479cba3575d7ef799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   weapon: {fileID: 11400000, guid: cf2e0d6567e5685478c6761083452d05, type: 2}
   rigidbody2d: {fileID: 2633184348261391125}
 --- !u!50 &2633184348261391125
@@ -160,16 +161,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.001231268, y: 0.001150094}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.24, y: 0.36}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2590948, y: 0.37623632}
   m_EdgeRadius: 0
