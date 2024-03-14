@@ -45,10 +45,8 @@ public class FireVFXs : MonoBehaviour
         _effect = GetComponent<VisualEffect>();
     }
 
-    public void changeDirection()
-    {
-        Vector2 direction = _movement.ReadValue<Vector2>();
-
+    public void changeDirection(Vector2 direction)
+    { 
         switch (direction)
         {
             case Vector2 _direction when (_direction.y >= -1 && _direction.y < 0): // bottom
