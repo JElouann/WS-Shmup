@@ -16,4 +16,4 @@ MonoBehaviour:
   bullet_speed: 0
   cooldown: 2.5
   damage: 5
-  lifeTime: 3
+  lifeTime: 0.1
