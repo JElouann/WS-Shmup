@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene: MonoBehaviour
 {
-    public void UIMenu()
+    public void LoadMenu()
     {
         SceneManager.LoadScene("UI-MainMenu");
     }
@@ -16,5 +16,10 @@ public class LoadScene: MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("Theoscene");
+    }
+
+    public void LoadSettings()
+    {
+        SceneManager.LoadScene("UI-Settings");
     }
 }
