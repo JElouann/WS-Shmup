@@ -36,11 +36,20 @@ public class BossBehaviour : MonoBehaviour
         StartCoroutine(MovingBoss());
     }
 
+    public void LowerHealth(int damage)
+    {
+        if(_health <= damage)
+        {
+            Destroy(this);
+        }
+
+    }
+
     private IEnumerator RotatingProbes()
     { 
         while (_health>0)
         {
-            _rotator.transform.Rotate(0, 0, 0.4f);
+            _rotator.transform.Rotate(0, 0, _probeSpeed);
             yield return null;
         }
     }
@@ -48,7 +57,15 @@ public class BossBehaviour : MonoBehaviour
     private IEnumerator MovingBoss()
     {
         _rb.AddForce(new Vector2(-70, 0));
-        yield return new WaitForSeconds(2);
-        _rb.AddForce(new Vector2(140, 0));
+        yield return new WaitForSeconds(1.2f);
+        do
+        {
+            _rb.velocity = Vector2.zero;
+            _rb.AddForce(new Vector2(140, 0));
+            yield return new WaitForSeconds(1.2f);
+            _rb.AddForce(new Vector2(-140, 0));
+            _rb.velocity = Vector2.zero;
+            yield return new WaitForSeconds(1.2f);
+        } while (_health>0);
     }
 }
