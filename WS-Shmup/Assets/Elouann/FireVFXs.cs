@@ -40,8 +40,8 @@ public class FireVFXs : MonoBehaviour
 
     private void Awake()
     {
-        _input = GetComponent<PlayerInput>();
-        _movement = _input.actions.FindAction("Movement");
+        // = GetComponent<PlayerInput>();
+        //_movement = _input.actions.FindAction("Movement");
         _effect = GetComponent<VisualEffect>();
     }
 
@@ -50,8 +50,8 @@ public class FireVFXs : MonoBehaviour
         switch (direction)
         {
             case Vector2 _direction when (_direction.y >= -1 && _direction.y < 0): // bottom
-                _effect.SetVector3("RandomVelocityMin", _newRandomVelocitiesMin[0]);
-                _effect.SetVector3("RandomVelocityMin", _newRandomVelocitiesMax[0]);
+                /*_effect.SetVector3("RandomVelocityMin", _newRandomVelocitiesMin[0]);
+                _effect.SetVector3("RandomVelocityMin", _newRandomVelocitiesMax[0])0;*/
                 break;
 
             case Vector2 _direction when (_direction.x >= -1 && _direction.x < 0) && (_direction.y >= -1 && _direction.y < 0): // bottom left

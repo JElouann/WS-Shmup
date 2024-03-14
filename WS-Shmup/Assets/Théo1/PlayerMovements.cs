@@ -22,7 +22,7 @@ public class PlayerMovements : MonoBehaviour
     void MovePlayer()
     {
         Vector2 direction = _movement.ReadValue<Vector2>();
-        BroadcastMessage("changeDirection", direction);
+        BroadcastMessage("changeDirection", direction, SendMessageOptions.DontRequireReceiver);
         transform.position += new Vector3(direction.x, direction.y, 0) * Time.deltaTime * speed;
     }
 }
