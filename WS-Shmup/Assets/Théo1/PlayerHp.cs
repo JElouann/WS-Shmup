@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class PlayerHp : MonoBehaviour
 {
+    public GameOverScreen gameOverScreen;
+    private int score = 0;  
+
     private int hp = 3;
 
 
-    private void FixedUpdate()
+    public void GameOver()
     {
-
+        gameOverScreen.Setup(score);
     }
 
     public void OnCollisionEnter2D(Collision2D other)
@@ -15,20 +18,15 @@ public class PlayerHp : MonoBehaviour
         if (other.gameObject.tag == "BulletEnnemy")
         {
             hp--;
-            if (hp <= 0)
-            {
-                Destroy(gameObject);
-                Debug.Log("hp");
-            }
         }
         if (other.gameObject.tag == "Ennemy")
         {
             hp--;
-            if (hp <= 0)
-            {
-                Destroy(gameObject);
-                Debug.Log("hp");
-            }
+        }
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+            GameOver();
         }
     }
 }

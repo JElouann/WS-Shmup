@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44d3e7e04e9db544ba25e592ee738093
+guid: a6b610f0ccbcdea4ebf2c7092d8d9aa5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Health Bar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 101
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9564632ffa573da4d8dc1d95d1675c3f
+      internalID: -1567918082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health Bar_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 101
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37dae5b8eb9b5474780826193b04e897
+      internalID: -1877513191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health Bar_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 101
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602b103a61e39a64e8d81889454ae846
+      internalID: 1370950954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health Bar_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 101
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bd94f943d77be469b734a5b8f4d562
+      internalID: -1166323416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Health Bar_0: -1567918082
+      Health Bar_1: 607892424
+      Health Bar_10: -1877513191
+      Health Bar_11: 373903248
+      Health Bar_12: 704036245
+      Health Bar_13: 905352018
+      Health Bar_14: -1765823867
+      Health Bar_15: 1560079459
+      Health Bar_16: 1651696473
+      Health Bar_17: -274391825
+      Health Bar_18: 1370950954
+      Health Bar_19: 1433288517
+      Health Bar_2: -745561987
+      Health Bar_20: 1966484444
+      Health Bar_21: -381328053
+      Health Bar_22: -1166323416
+      Health Bar_23: -332224044
+      Health Bar_3: -1303419692
+      Health Bar_4: 504629454
+      Health Bar_5: 120418879
+      Health Bar_6: 633733119
+      Health Bar_7: -335866382
+      Health Bar_8: -120388552
+      Health Bar_9: 1331984298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
