@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1536574287863329354, guid: 80831e0a74f174b47b142c01e4ae1ed0, type: 3}
+      propertyPath: fireforce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1857724783180327259, guid: 80831e0a74f174b47b142c01e4ae1ed0, type: 3}
       propertyPath: bullet
       value: 
@@ -112,7 +116,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8828125, y: 1}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

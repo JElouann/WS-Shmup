@@ -8,6 +8,8 @@ public class PlayerHp : MonoBehaviour
 
     private int hp = 3;
 
+    public bool shield = false;
+
     [SerializeField] private Image SpriteHealthBar1;
     [SerializeField] private Image SpriteHealBar2;
     [SerializeField] private Image SpriteHealBar3;
@@ -21,9 +23,13 @@ public class PlayerHp : MonoBehaviour
     {
         if (other.gameObject.tag == "BulletEnnemy")
         {
-            hp--;
-            Destroy(other.gameObject);
-            OnLosingHealth();
+            if (!shield)
+            {
+                hp--;
+                Destroy(other.gameObject);
+                OnLosingHealth();
+            }
+
         }
         if (other.gameObject.tag == "Ennemy")
         {

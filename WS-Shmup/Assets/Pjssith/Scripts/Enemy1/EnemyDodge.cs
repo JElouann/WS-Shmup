@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyDodge : MonoBehaviour
 {
-    private float amp = 1.5f;
-    private float fre = 2f;
+    private float amp = 6f;
+    private float fre = 1f;
 
 
     // Start is called before the first frame update

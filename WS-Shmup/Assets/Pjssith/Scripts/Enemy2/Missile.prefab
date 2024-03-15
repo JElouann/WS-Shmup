@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de943418b81d9be4fbea2f6f062bc52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cible: {fileID: 0}
-  explosion: {fileID: 0}
+  cible: {fileID: 2180416147471554003, guid: c8f13655e5ea1844592a5a065f5dcbe0, type: 3}
+  explosion: {fileID: 715699775843756009, guid: 3ef040a7ec088d44a9227b473a9c2907, type: 3}
   speed: 5
   rotateSpeed: 200
 --- !u!60 &5914133575724735585

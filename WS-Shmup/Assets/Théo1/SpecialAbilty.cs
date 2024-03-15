@@ -6,6 +6,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class SpecialAbilty : MonoBehaviour
 {
     [SerializeField] private GameObject _shield;
+    private PlayerHp _playerHp;
 
     private GameObject _player;
 
@@ -14,10 +15,12 @@ public class SpecialAbilty : MonoBehaviour
     private void Start()
     {
         _player = GameObject.Find("PlayerShip");
+        _playerHp = GameObject.FindObjectOfType<PlayerHp>();
     }
 
     private async void OnSpecialAbility()
     {
+        _playerHp.shield = true;
         if (_canuseshield == true)
         {
             _shield.SetActive(true);
