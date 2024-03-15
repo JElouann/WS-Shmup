@@ -22,6 +22,7 @@ public class PlayerHp : MonoBehaviour
         if (other.gameObject.tag == "BulletEnnemy")
         {
             hp--;
+            Destroy(other.gameObject);
             OnLosingHealth();
         }
         if (other.gameObject.tag == "Ennemy")
