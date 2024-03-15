@@ -32,7 +32,7 @@ public class RocketLauncherBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public virtual void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Wall")
         {

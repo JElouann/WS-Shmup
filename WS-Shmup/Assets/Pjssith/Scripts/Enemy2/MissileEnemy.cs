@@ -30,15 +30,12 @@ public class MissileEnemy : MonoBehaviour
 
         missile.velocity = transform.up * speed; 
 
-        void OnTriggerEnter2D () //Modifier pour dégats du missile.
-        {
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-
-        }
-
+    }
+    void OnTriggerEnter2D() //Modifier pour dégats du missile.
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
 
     }
-
 
 }

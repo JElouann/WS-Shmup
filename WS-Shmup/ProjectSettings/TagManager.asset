@@ -7,6 +7,8 @@ TagManager:
   - Ennemy
   - Wall
   - spritedetect
+  - BulletEnnemy
+  - BulletPlayer
   layers:
   - Default
   - TransparentFX

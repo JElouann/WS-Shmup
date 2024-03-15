@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1336483789386506841}
   m_Layer: 0
   m_Name: RocketLancherBullet
-  m_TagString: Untagged
+  m_TagString: BulletEnnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9b36c929b010e4594238afe69dbd50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   weapon: {fileID: 11400000, guid: 60aa5ba7d22b22b47ab37141f2e63e1d, type: 2}
   _cooldown: 0
   rigidbody2d: {fileID: 4467325509327219220}
@@ -129,7 +130,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!61 &1336483789386506841
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,7 +160,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0021968633, y: 0.0032954216}
