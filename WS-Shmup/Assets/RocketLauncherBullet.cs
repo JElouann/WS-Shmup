@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class RocketLauncherBullet : MonoBehaviour
 {
@@ -32,19 +33,22 @@ public class RocketLauncherBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Wall")
         {
-            Destroy(gameObject);
+
             var b = gameObject.transform.position;
-            Instantiate(Explosion, b , transform.rotation);
+            Instantiate(Explosion, b, transform.rotation);
+            Destroy(gameObject);
         }
 
         if (other.gameObject.tag == "Ennemy")
         {
+
             var b = gameObject.transform.position;
             Instantiate(Explosion, b, transform.rotation);
+            other.gameObject.SendMessage("LowerHealth", damage, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
         }
     }
