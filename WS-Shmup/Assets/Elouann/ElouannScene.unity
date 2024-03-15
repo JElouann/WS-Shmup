@@ -290,7 +290,8 @@ Transform:
   m_LocalPosition: {x: 0.085, y: -2.45, z: 8.796251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 630648682}
   m_Father: {fileID: 1544042597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &229947192
@@ -463,6 +464,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 45
+  _enemyBulletPrefab: {fileID: 880167914067651208, guid: f552304d19b576546b5f9db29c3ef9bd, type: 3}
+  socket: {fileID: 630648682}
+  _fireForce: 15
+--- !u!1 &286233842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286233843}
+  m_Layer: 0
+  m_Name: BossFireSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &286233843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286233842}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03627451, y: -1.2, z: -0.09436605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2064005361}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &309606256
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +692,8 @@ Transform:
   m_LocalPosition: {x: 2.45, y: 0, z: 8.796251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1500168455}
   m_Father: {fileID: 1544042597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &619312223
@@ -830,6 +866,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 45
+  _enemyBulletPrefab: {fileID: 880167914067651208, guid: f552304d19b576546b5f9db29c3ef9bd, type: 3}
+  socket: {fileID: 1500168455}
+  _fireForce: 10
 --- !u!1 &628424453
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +1002,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628424453}
   m_CullTransparentMesh: 1
+--- !u!1 &630648681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630648682}
+  m_Layer: 0
+  m_Name: ProbeFireSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &630648682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630648681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: -0.03, y: -0.74, z: -8.890617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229947191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &677959491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677959492}
+  m_Layer: 0
+  m_Name: ProbeFireSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &677959492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677959491}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -0.74, z: -0.09436605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1195327271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &848761542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1166,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &851807848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851807849}
+  m_Layer: 0
+  m_Name: ProbeFireSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851807849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851807848}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -0.74, z: -0.09436605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1339824344}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1014038869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,7 +1844,8 @@ Transform:
   m_LocalPosition: {x: 0.085, y: 2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 677959492}
   m_Father: {fileID: 1544042597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1195327272
@@ -1885,6 +2018,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 45
+  _enemyBulletPrefab: {fileID: 880167914067651208, guid: f552304d19b576546b5f9db29c3ef9bd, type: 3}
+  socket: {fileID: 677959492}
+  _fireForce: 10
 --- !u!1 &1234617880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +2273,8 @@ Transform:
   m_LocalPosition: {x: -2.45, y: 0, z: 8.796251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 851807849}
   m_Father: {fileID: 1544042597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1339824345
@@ -2310,6 +2447,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 45
+  _enemyBulletPrefab: {fileID: 880167914067651208, guid: f552304d19b576546b5f9db29c3ef9bd, type: 3}
+  socket: {fileID: 851807849}
+  _fireForce: 5
+--- !u!1 &1500168454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500168455}
+  m_Layer: 0
+  m_Name: ProbeFireSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1500168455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500168454}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -0.74, z: -0.09436605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 619312222}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544042596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2758,6 +2929,8 @@ MonoBehaviour:
   _bossProbe3: {fileID: 229947196}
   _bossProbe4: {fileID: 619312227}
   _probeSpeed: 0.35
+  _enemyBulletPrefab: {fileID: 880167914067651208, guid: f552304d19b576546b5f9db29c3ef9bd, type: 3}
+  socket: {fileID: 286233843}
 --- !u!212 &2064005360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2825,6 +2998,7 @@ Transform:
   m_Children:
   - {fileID: 1544042597}
   - {fileID: 1259856605}
+  - {fileID: 286233843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2064005362

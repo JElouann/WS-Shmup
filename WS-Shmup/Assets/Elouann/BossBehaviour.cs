@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using DG.Tweening;
 using UnityEngine;
 
@@ -23,9 +24,15 @@ public class BossBehaviour : MonoBehaviour
     private GameObject _barrier;
 
     private bool _isBarrierOn = true;
+    private bool _canShoot;
 
     [SerializeField]
     private float _probeSpeed;
+
+    [SerializeField]
+    private GameObject _enemyBulletPrefab;
+    [SerializeField]
+    private Transform socket;
 
     private void Awake()
     {
@@ -39,6 +46,7 @@ public class BossBehaviour : MonoBehaviour
         print(_rotator);
         StartCoroutine(RotatingProbes());
         StartCoroutine(MovingBoss());
+        StartCoroutine(Shooting());
     }
 
     public void LowerHealth(int damage)
@@ -59,6 +67,11 @@ public class BossBehaviour : MonoBehaviour
         {
             _isBarrierOn = false;
             Destroy(_barrier);
+        }
+
+        if (_bossProbe1 == null && _bossProbe2 == null && _bossProbe3 == null && _bossProbe4 == null)
+        {
+            _canShoot = false;
         }
     }
 
@@ -84,5 +97,20 @@ public class BossBehaviour : MonoBehaviour
             _rb.velocity = Vector2.zero;
             yield return new WaitForSeconds(1.2f);
         } while (_health>0);
+    }
+
+    private IEnumerator Shooting()
+    {
+        while (_health>0)
+        {
+            if (!_canShoot)
+            {
+                _bossProbe1.Shooting();
+                _bossProbe2.Shooting();
+                _bossProbe3.Shooting();
+                _bossProbe4.Shooting();
+                yield return new WaitForSeconds(1);
+            }
+        }
     }
 }
