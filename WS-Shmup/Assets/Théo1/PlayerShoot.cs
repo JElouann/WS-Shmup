@@ -13,6 +13,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject bulletPrefabShotgunBullet;
     public GameObject bulletPrefabLazer;
     public GameObject bulletPrefabRocketLauncherBullet;
+
     public Transform sockect;
 
     private string WeaponOnUse ;
@@ -38,12 +39,12 @@ public class PlayerShoot : MonoBehaviour
 
         switch (WeaponOnUse)
         {
-            case "Arme1": //Utilisation de l'arme de base 
+            case "Arme : 1": //Utilisation de l'arme de base 
 
                 Instantiate(bulletPrefabBaseBullet, sockect.position, transform.rotation);
                 break;
 
-            case "Arme2"://Utilisation du Fusils à pompe
+            case "Arme : 2"://Utilisation du Fusils à pompe
                 if (IsShoot1 == false)
                 {
                     IsShoot1 = true;
@@ -54,7 +55,7 @@ public class PlayerShoot : MonoBehaviour
 
                 break;
 
-            case "Arme3"://Utilisation du Laser
+            case "Arme : 3"://Utilisation du Laser
                 if (IsShoot2 == false)
                 {
                     IsShoot2 = true;
@@ -64,7 +65,7 @@ public class PlayerShoot : MonoBehaviour
                 }
                 break;
 
-            case "Arme4"://Utilisation du Lance Roquettes
+            case "Arme : 4"://Utilisation du Lance Roquettes
                 if (IsShoot3 == false)
                 {
                     IsShoot3 = true;
