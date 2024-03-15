@@ -136,9 +136,10 @@ GameObject:
   - component: {fileID: 229947194}
   - component: {fileID: 229947193}
   - component: {fileID: 229947195}
+  - component: {fileID: 229947196}
   m_Layer: 0
   m_Name: Boss1Probe3
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -315,6 +316,19 @@ RotationConstraint:
   m_Sources:
   - sourceTransform: {fileID: 2064005361}
     weight: 1
+--- !u!114 &229947196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229947190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd055805b789564eb293950de817e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 45
 --- !u!1 &309606256
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,9 +427,10 @@ GameObject:
   - component: {fileID: 619312225}
   - component: {fileID: 619312224}
   - component: {fileID: 619312226}
+  - component: {fileID: 619312227}
   m_Layer: 0
   m_Name: Boss1Probe4
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,6 +607,19 @@ RotationConstraint:
   m_Sources:
   - sourceTransform: {fileID: 2064005361}
     weight: 1
+--- !u!114 &619312227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619312221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd055805b789564eb293950de817e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 45
 --- !u!1 &1110441841
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,9 +881,10 @@ GameObject:
   - component: {fileID: 1195327273}
   - component: {fileID: 1195327275}
   - component: {fileID: 1195327276}
+  - component: {fileID: 1195327277}
   m_Layer: 0
   m_Name: Boss1Probe1
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1032,6 +1061,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1195327277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195327270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd055805b789564eb293950de817e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 45
 --- !u!1 &1259856604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1085,7 @@ GameObject:
   - component: {fileID: 1259856605}
   - component: {fileID: 1259856606}
   m_Layer: 0
-  m_Name: Boss1FieldForce_0
+  m_Name: Boss1FieldForce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,9 +1172,10 @@ GameObject:
   - component: {fileID: 1339824346}
   - component: {fileID: 1339824348}
   - component: {fileID: 1339824349}
+  - component: {fileID: 1339824350}
   m_Layer: 0
   m_Name: Boss1Probe2
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1309,6 +1352,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1339824350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339824343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd055805b789564eb293950de817e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 45
 --- !u!1 &1544042596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,11 +1957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3975a9206aef31c4080c3bba4bf1863a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
-  _bossProbe1: {fileID: 1195327270}
-  _bossProbe2: {fileID: 1339824343}
-  _bossProbe3: {fileID: 229947190}
-  _bossProbe4: {fileID: 619312221}
+  _health: 150
+  _bossProbe1: {fileID: 1195327277}
+  _bossProbe2: {fileID: 1339824350}
+  _bossProbe3: {fileID: 229947196}
+  _bossProbe4: {fileID: 619312227}
   _probeSpeed: 0.35
 --- !u!212 &2064005360
 SpriteRenderer:
@@ -2002,7 +2058,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!58 &2064005363
 CircleCollider2D:
   m_ObjectHideFlags: 0
