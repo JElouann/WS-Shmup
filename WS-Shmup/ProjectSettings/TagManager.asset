@@ -10,6 +10,7 @@ TagManager:
   - BulletEnnemy
   - BulletPlayer
   - Heal
+  - ShootDetection
   layers:
   - Default
   - TransparentFX

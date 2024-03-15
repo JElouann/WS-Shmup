@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class ProbeBehaviour : MonoBehaviour
@@ -12,6 +13,8 @@ public class ProbeBehaviour : MonoBehaviour
     private GameObject _enemyBulletPrefab;
     [SerializeField] private Transform socket;
     [SerializeField] private int _fireForce;
+
+    [SerializeField] Collider2D _colliderDetected;
 
     private void Awake()
     {
@@ -26,11 +29,26 @@ public class ProbeBehaviour : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    
+
+    private void Update()
+    {
+        if (gameObject.transform.rotation.y == 45)
+        {
+            Shooting();
+        }    
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "ShootDetection")
+        {
+            Shooting();
+        }
+    }
+
     public void Shooting()
     {
-        GameObject _bullet = Instantiate(_enemyBulletPrefab, socket.transform.position, socket.transform.rotation, transform);
-        _bullet.GetComponent<Rigidbody2D>().AddForce(-socket.up * _fireForce, ForceMode2D.Impulse);
-        Debug.Log(_bullet);
+        GameObject _bullet = Instantiate(_enemyBulletPrefab, socket.transform.position, socket.transform.rotation, null);
+        _bullet.GetComponent<Rigidbody2D>().AddRelativeForce(-socket.up * _fireForce, ForceMode2D.Impulse);
     }
 }
