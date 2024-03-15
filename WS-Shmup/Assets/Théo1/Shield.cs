@@ -1,24 +1,24 @@
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Shield : MonoBehaviour
 {
-    [SerializeField] GameObject shield;
+    private GameObject _shield;
 
     private void Start()
     {
-        shield = GameObject.Find("Shield");
+        _shield = GameObject.Find("Shield");
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "BulletEnnemy")
         {
-            shield.SetActive(false);
+            _shield.SetActive(false);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Ennemy")
         {
-            shield.SetActive(false) ;
+            _shield.SetActive(false) ;
         }
     }
 }
