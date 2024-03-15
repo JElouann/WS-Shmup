@@ -9,6 +9,7 @@ TagManager:
   - spritedetect
   - BulletEnnemy
   - BulletPlayer
+  - Heal
   layers:
   - Default
   - TransparentFX
