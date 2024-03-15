@@ -1,38 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
 public class BossBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private int _health = 10;
-    [SerializeField]
-    private ProbeBehaviour _bossProbe1;
-    [SerializeField]
-    private ProbeBehaviour _bossProbe2;
-    [SerializeField]
-    private ProbeBehaviour _bossProbe3;
-    [SerializeField]
-    private ProbeBehaviour _bossProbe4;
+    [Header ("Stats")]
+    [SerializeField] private int _health = 10;
+    [SerializeField] private float _probeSpeed;
+    [SerializeField] private int _fireForce;
+
+    [Header ("Minions")]
+    [SerializeField] private ProbeBehaviour _bossProbe1;
+    [SerializeField] private ProbeBehaviour _bossProbe2;
+    [SerializeField] private ProbeBehaviour _bossProbe3;
+    [SerializeField] private ProbeBehaviour _bossProbe4;
+
+    [Header("System")]
+    [SerializeField] private Transform socket;
+    [SerializeField] private GameObject _enemyBulletPrefab;
 
     private GameObject _rotator;
-
     private Rigidbody2D _rb;
-
     private GameObject _barrier;
-
     private bool _isBarrierOn = true;
     private bool _canShoot;
-
-    [SerializeField]
-    private float _probeSpeed;
-
-    [SerializeField]
-    private GameObject _enemyBulletPrefab;
-    [SerializeField]
-    private Transform socket;
+    private bool _shoot = true;
 
     private void Awake()
     {
@@ -46,7 +41,6 @@ public class BossBehaviour : MonoBehaviour
         print(_rotator);
         StartCoroutine(RotatingProbes());
         StartCoroutine(MovingBoss());
-        StartCoroutine(Shooting());
     }
 
     public void LowerHealth(int damage)
@@ -67,11 +61,13 @@ public class BossBehaviour : MonoBehaviour
         {
             _isBarrierOn = false;
             Destroy(_barrier);
-        }
+            _canShoot = true;
+            if (_shoot)
+            {
+                Shoot();
+                Debug.Log("y");
 
-        if (_bossProbe1 == null && _bossProbe2 == null && _bossProbe3 == null && _bossProbe4 == null)
-        {
-            _canShoot = false;
+            }
         }
     }
 
@@ -99,18 +95,13 @@ public class BossBehaviour : MonoBehaviour
         } while (_health>0);
     }
 
-    private IEnumerator Shooting()
+    private async void Shoot()
     {
-        while (_health>0)
-        {
-            if (!_canShoot)
-            {
-                _bossProbe1.Shooting();
-                _bossProbe2.Shooting();
-                _bossProbe3.Shooting();
-                _bossProbe4.Shooting();
-                yield return new WaitForSeconds(1);
-            }
-        }
+        _shoot = false;
+        GameObject _bullet = Instantiate(_enemyBulletPrefab, socket.transform.position, socket.transform.rotation, null);
+        _bullet.GetComponent<Rigidbody2D>().AddForce(-socket.up * _fireForce, ForceMode2D.Impulse);
+        await Task.Delay(2000);
+        _shoot = true;
+
     }
 }
