@@ -27,7 +27,6 @@ public class PlayerChangeWeapon : MonoBehaviour
         _change = _input.actions.FindAction("Shoot");
         _NbWeapons = Weapons.Count;
         WeaponUse = Weapons[_indice];
-        Debug.Log(WeaponUse);
     }
 
     void OnChangeWeapon()
