@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 15dd0b5fd34c3144e8307e537b40e0bf
+guid: a6b610f0ccbcdea4ebf2c7092d8d9aa5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: xbox-ui-light-theme_6
+      name: Health Bar_0
       rect:
         serializedVersion: 2
-        x: 402
-        y: 83
-        width: 27
-        height: 28
+        x: 0
+        y: 231
+        width: 101
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f4393b17beb1a64e82eda3073e3ef78
-      internalID: -453034650
+      spriteID: 9564632ffa573da4d8dc1d95d1675c3f
+      internalID: -1567918082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xbox-ui-light-theme_17
+      name: Health Bar_10
       rect:
         serializedVersion: 2
-        x: 161
-        y: 17
-        width: 15
-        height: 14
+        x: 0
+        y: 126
+        width: 101
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0feccef74733241b7f6fcb2c06e339
-      internalID: -1599668764
+      spriteID: 37dae5b8eb9b5474780826193b04e897
+      internalID: -1877513191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xbox-ui-light-theme_7
+      name: Health Bar_18
       rect:
         serializedVersion: 2
-        x: 402
-        y: 50
-        width: 27
-        height: 28
+        x: 0
+        y: 42
+        width: 101
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0987fe489cf124b45b215fdea992ebc0
-      internalID: 293881514
+      spriteID: 602b103a61e39a64e8d81889454ae846
+      internalID: 1370950954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xbox-ui-light-theme_0
+      name: Health Bar_22
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 16
-        height: 16
+        x: 0
+        y: 0
+        width: 101
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09332850ca034714f942165c6dbe6a45
-      internalID: -540304543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: xbox-ui-light-theme_1
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b38a02c82e2c9e498c5387a6c1ac513
-      internalID: -1162909865
+      spriteID: d8bd94f943d77be469b734a5b8f4d562
+      internalID: -1166323416
       vertices: []
       indices: 
       edges: []
@@ -225,36 +204,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      xbox-ui-light-theme_0: -540304543
-      xbox-ui-light-theme_1: -1162909865
-      xbox-ui-light-theme_10: -1751413251
-      xbox-ui-light-theme_11: 1676578602
-      xbox-ui-light-theme_12: 1214601266
-      xbox-ui-light-theme_13: -1378445242
-      xbox-ui-light-theme_14: 132721949
-      xbox-ui-light-theme_15: 1663781045
-      xbox-ui-light-theme_16: -1909951052
-      xbox-ui-light-theme_17: -1599668764
-      xbox-ui-light-theme_18: 406679601
-      xbox-ui-light-theme_19: -484239255
-      xbox-ui-light-theme_2: 395246818
-      xbox-ui-light-theme_20: 1998051343
-      xbox-ui-light-theme_21: -202216199
-      xbox-ui-light-theme_22: 683687446
-      xbox-ui-light-theme_23: -1815033385
-      xbox-ui-light-theme_24: -856227788
-      xbox-ui-light-theme_25: 1568573287
-      xbox-ui-light-theme_26: -41803477
-      xbox-ui-light-theme_27: -1884551973
-      xbox-ui-light-theme_28: -2039766801
-      xbox-ui-light-theme_29: -580354613
-      xbox-ui-light-theme_3: 104990284
-      xbox-ui-light-theme_4: -1531413852
-      xbox-ui-light-theme_5: 1854053204
-      xbox-ui-light-theme_6: -453034650
-      xbox-ui-light-theme_7: 293881514
-      xbox-ui-light-theme_8: -1400383248
-      xbox-ui-light-theme_9: 1745260068
+      Health Bar_0: -1567918082
+      Health Bar_1: 607892424
+      Health Bar_10: -1877513191
+      Health Bar_11: 373903248
+      Health Bar_12: 704036245
+      Health Bar_13: 905352018
+      Health Bar_14: -1765823867
+      Health Bar_15: 1560079459
+      Health Bar_16: 1651696473
+      Health Bar_17: -274391825
+      Health Bar_18: 1370950954
+      Health Bar_19: 1433288517
+      Health Bar_2: -745561987
+      Health Bar_20: 1966484444
+      Health Bar_21: -381328053
+      Health Bar_22: -1166323416
+      Health Bar_23: -332224044
+      Health Bar_3: -1303419692
+      Health Bar_4: 504629454
+      Health Bar_5: 120418879
+      Health Bar_6: 633733119
+      Health Bar_7: -335866382
+      Health Bar_8: -120388552
+      Health Bar_9: 1331984298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
