@@ -100,7 +100,7 @@ public class BossBehaviour : MonoBehaviour
         _shoot = false;
         GameObject _bullet = Instantiate(_enemyBulletPrefab, socket.transform.position, socket.transform.rotation, null);
         _bullet.GetComponent<Rigidbody2D>().AddForce(-socket.up * _fireForce, ForceMode2D.Impulse);
-        await Task.Delay(2000);
+        await Task.Delay(500);
         _shoot = true;
 
     }
