@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlayerHp : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerHp : MonoBehaviour
     [SerializeField] private Image SpriteHealBar2;
     [SerializeField] private Image SpriteHealBar3;
 
+    private Camera MainCamera;
+
     public void GameOver()
     {
         gameOverScreen.Setup(score);
@@ -26,6 +29,7 @@ public class PlayerHp : MonoBehaviour
             if (!shield)
             {
                 hp--;
+                MainCamera.DOShakePosition(0.4f, 2);
                 Destroy(other.gameObject);
                 OnLosingHealth();
             }
@@ -49,15 +53,20 @@ public class PlayerHp : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        MainCamera = Camera.main;    
+    }
+
     private void OnLosingHealth()
     {
         switch (hp)
         { 
             case 2:
-                SpriteHealthBar1.gameObject.SetActive(false);
+                SpriteHealthBar1.DOFade(0, 0.1f);
                 break; 
             case 1:
-                SpriteHealBar2.gameObject.SetActive(false);
+                SpriteHealBar2.DOFade(0, 0.1f);
                 break;
         }
     }
@@ -67,10 +76,10 @@ public class PlayerHp : MonoBehaviour
         switch (hp)
         {
             case 3:
-                SpriteHealthBar1.gameObject.SetActive(true);
+                SpriteHealthBar1.DOFade(100, 0.1f);
                 break;
             case 2:
-                SpriteHealBar2.gameObject.SetActive(true);
+                SpriteHealBar2.DOFade(100, 0.1f);
                 break;
         }
     }
