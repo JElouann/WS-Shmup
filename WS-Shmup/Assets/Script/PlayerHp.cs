@@ -43,9 +43,34 @@ public class PlayerHp : MonoBehaviour
         }
         if (other.gameObject.tag == "Heal")
         {
-            hp++;
-            Destroy(other.gameObject);
-            OnRegainingHealth();
+            if (hp <3)
+            {
+                hp++;
+                Destroy(other.gameObject);
+                OnRegainingHealth();
+            }
+            else 
+            {
+                Destroy(other.gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "BulletEnnemy")
+        {
+            if (!shield)
+            {
+                hp--;
+                Destroy(other.gameObject);
+                OnLosingHealth();
+            }
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+                GameOver();
+            }
         }
     }
 

@@ -13,9 +13,13 @@ public class LoadScene: MonoBehaviour
         SceneManager.LoadScene("UI-Play");
     }
 
-    public void LoadGame()
+    public void LoadGameInfinite()
     {
-        SceneManager.LoadScene("SceneGameInfini");
+        SceneManager.LoadScene("SceneGameInfinite");
+    }
+    public void LoadGameTimer()
+    {
+        SceneManager.LoadScene("SceneGameTimer");
     }
 
     public void LoadSettings()

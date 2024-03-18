@@ -148,6 +148,7 @@ MonoBehaviour:
   _bossProbe4: {fileID: 1628416417551865633}
   socket: {fileID: 6235034254095897690}
   _enemyBulletPrefab: {fileID: 880167914067651208, guid: f552304d19b576546b5f9db29c3ef9bd, type: 3}
+  Heal: {fileID: 5683992739552648913, guid: 36db54a2e009f1442bd73e10a445534d, type: 3}
 --- !u!50 &8022046895711974089
 Rigidbody2D:
   serializedVersion: 4

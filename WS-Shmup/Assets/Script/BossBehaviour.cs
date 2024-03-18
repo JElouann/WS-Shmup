@@ -28,6 +28,9 @@ public class BossBehaviour : MonoBehaviour
     private bool _isBarrierOn = true;
     private bool _shoot = true;
 
+    [Header("Heal")]
+    [SerializeField] private GameObject Heal;
+
     private void Awake()
     {
         _rotator = this.transform.GetChild(0).gameObject;
@@ -50,6 +53,7 @@ public class BossBehaviour : MonoBehaviour
             if (_health <= 0)
             {
                 Destroy(this.gameObject);
+                Instantiate(Heal, Vector3.zero, Quaternion.identity);
             }
         }
     }
