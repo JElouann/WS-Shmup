@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/UI/UI-Settings.unity
     guid: 600c69feb3721e74bb23f20151536a47
   - enabled: 1
-    path: "Assets/Th\xE9o1/Theoscene.unity"
+    path: "Assets/Th\xE9o1/SceneGameInfini.unity"
     guid: 6c7cd615886dcc04fa980b46ee8f276e
+  - enabled: 1
+    path: "Assets/Th\xE9o1/SceneGameTimer.unity"
+    guid: 186a3c600e0f61144b3b8a5822124f16
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7790b77f36dd72b4b9f08bcae84f7d46, type: 2}

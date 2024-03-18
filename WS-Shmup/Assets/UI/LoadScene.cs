@@ -15,7 +15,7 @@ public class LoadScene: MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("Theoscene");
+        SceneManager.LoadScene("SceneGameInfini");
     }
 
     public void LoadSettings()

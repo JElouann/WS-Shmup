@@ -158,10 +158,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
+    - - {x: -0.3624593, y: 0.5030565}
+      - {x: -0.5764115, y: 0.20022297}
+      - {x: -0.5729389, y: -0.2410326}
+      - {x: -0.42970145, y: -0.5244522}
+      - {x: 0.27982283, y: -0.52100945}
+      - {x: 0.43581438, y: -0.26770878}
+      - {x: 0.42116195, y: 0.37207127}
+      - {x: 0.19129777, y: 0.5061121}
   m_UseDelaunayMesh: 0
 --- !u!114 &6791411973016359862
 MonoBehaviour:
@@ -175,5 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72fdddf438962e459412192ec5c2f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 100
+  _hp: 60
+  ScorePoints: 100
   MiniEnemy: {fileID: 6766965989553546869, guid: 2f6765e9a9fdb054eba3a24509c8eaa1, type: 3}

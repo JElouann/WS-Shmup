@@ -13,6 +13,13 @@ public class Wave : MonoBehaviour
 
     [SerializeField] private bool enableSpawn = true;
 
+    [SerializeField] private GameObject Boss;
+
+    private int nb_ennemy;
+    public int nbennemyspawnboss;
+
+    private bool bossActive = false;
+
 
     Vector2 cubeCollider;
     Vector2 colliderCenter;
@@ -38,18 +45,49 @@ public class Wave : MonoBehaviour
         StartCoroutine(wave());
     }
 
+    private void FixedUpdate()
+    {
+        if (nb_ennemy == nbennemyspawnboss)
+        {
+            if (bossActive == false) 
+            { 
+                bossActive = true;
+                Instantiate(Boss, Vector2.one , Quaternion.identity);
+                nbennemyspawnboss += nbennemyspawnboss;
+                
+            }
+            
+        }
+
+        if (bossActive == true) 
+        {
+            GameObject boss = GameObject.Find("Boss(Clone)");
+            if (boss == null)
+            {
+                bossActive = false;
+                enableSpawn = true;
+                StartCoroutine(wave());
+            }
+            else
+            {
+                enableSpawn = false;
+            }
+        }
+
+    }
+
     private IEnumerator wave()
     {
         WaitForSeconds timeout = new WaitForSeconds(sRate);
 
-            
 
-        while (enableSpawn)
+        while (enableSpawn == true)
         {
             int random = Random.Range(0, enemiesFab.Length);
             GameObject enemies = enemiesFab[random];
             Instantiate(enemies, RandomSpawn(), Quaternion.identity);
             yield return timeout;
+            nb_ennemy++;
         }
     }
 
