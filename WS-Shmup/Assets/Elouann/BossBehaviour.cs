@@ -26,7 +26,6 @@ public class BossBehaviour : MonoBehaviour
     private Rigidbody2D _rb;
     private GameObject _barrier;
     private bool _isBarrierOn = true;
-    private bool _canShoot;
     private bool _shoot = true;
 
     private void Awake()
@@ -61,11 +60,9 @@ public class BossBehaviour : MonoBehaviour
         {
             _isBarrierOn = false;
             Destroy(_barrier);
-            _canShoot = true;
             if (_shoot)
             {
                 Shoot();
-                Debug.Log("y");
 
             }
         }

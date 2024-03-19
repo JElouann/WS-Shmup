@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RocketLauncher
   m_EditorClassIdentifier: 
   name: 
-  bullet_speed: 500
+  bullet_speed: 80
   cooldown: 5
   damage: 0
   lifeTime: 3

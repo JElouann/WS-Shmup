@@ -10,8 +10,8 @@ public class PlayerHp : MonoBehaviour
     private int hp = 3;
 
     public bool shield = false;
-
-    [SerializeField] private Image SpriteHealthBar1;
+    [SerializeField] private Image SpriteHealBar0;
+    [SerializeField] private Image SpriteHealBar1;
     [SerializeField] private Image SpriteHealBar2;
     [SerializeField] private Image SpriteHealBar3;
 
@@ -64,9 +64,13 @@ public class PlayerHp : MonoBehaviour
         { 
             case 2:
                 SpriteHealthBar1.DOFade(0, 0.1f);
+                SpriteHealBar3.gameObject.SetActive(false);
                 break; 
             case 1:
                 SpriteHealBar2.DOFade(0, 0.1f);
+                break;
+            case 0:
+                SpriteHealBar1.gameObject.SetActive(false);
                 break;
         }
     }
@@ -80,6 +84,10 @@ public class PlayerHp : MonoBehaviour
                 break;
             case 2:
                 SpriteHealBar2.DOFade(100, 0.1f);
+                SpriteHealBar2.gameObject.SetActive(true);
+                break;
+            case 2:
+                SpriteHealBar3.gameObject.SetActive(true);
                 break;
         }
     }

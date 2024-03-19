@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyFire : MonoBehaviour
@@ -17,11 +16,6 @@ public class EnemyFire : MonoBehaviour
         StartCoroutine(StartFiring());
     }
 
-    // Update is called once per frame
-    void Update()
-    {   
-        
-    }
 
 
     // Enemy starts firing at spawn, forever, bullet speed = fireforce
