@@ -63,14 +63,13 @@ public class PlayerHp : MonoBehaviour
         switch (hp)
         { 
             case 2:
-                SpriteHealthBar1.DOFade(0, 0.1f);
-                SpriteHealBar3.gameObject.SetActive(false);
+                SpriteHealBar3.DOFade(0, 0.1f);
                 break; 
             case 1:
                 SpriteHealBar2.DOFade(0, 0.1f);
                 break;
             case 0:
-                SpriteHealBar1.gameObject.SetActive(false);
+                SpriteHealBar1.DOFade(0, 0.1f);
                 break;
         }
     }
@@ -80,14 +79,14 @@ public class PlayerHp : MonoBehaviour
         switch (hp)
         {
             case 3:
-                SpriteHealthBar1.DOFade(100, 0.1f);
+                SpriteHealBar3.DOFade(100, 0.1f);
                 break;
             case 2:
                 SpriteHealBar2.DOFade(100, 0.1f);
-                SpriteHealBar2.gameObject.SetActive(true);
+
                 break;
-            case 2:
-                SpriteHealBar3.gameObject.SetActive(true);
+            case 1:
+                SpriteHealBar1.DOFade(100, 0.1f);
                 break;
         }
     }

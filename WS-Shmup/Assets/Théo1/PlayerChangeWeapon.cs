@@ -36,6 +36,7 @@ public class PlayerChangeWeapon : MonoBehaviour
         WeaponUse = _weapons[_indice];
 
         _textCurrentColor = _textColor[_indice];
+        TextWeaponUse.color = _textCurrentColor;
     }
 
     void OnChangeWeapon()

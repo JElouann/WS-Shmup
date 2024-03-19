@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!114 &151439486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3303,6 +3304,74 @@ PrefabInstance:
       propertyPath: TextWeaponUse
       value: 
       objectReference: {fileID: 1007911101}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[0].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[0].g
+      value: 0.99695563
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[1].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[1].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[2].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[2].b
+      value: 0.90971565
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[2].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[2].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[3].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[3].b
+      value: 0.32471776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[3].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521596005552020534, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: _textColor.Array.data[3].r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1736350657072321570, guid: 41895800d914031438adc34aa1c410f0, type: 3}
       propertyPath: m_Name
       value: PlayerPrefab
