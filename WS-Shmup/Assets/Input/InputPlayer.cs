@@ -177,6 +177,17 @@ public partial class @InputPlayer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c2f4c8ed-8cba-4df9-9a48-53db13053cf0"",
+                    ""path"": ""<Joystick>/stick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""ca893436-b6b6-48d1-9bb4-377213460d88"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
@@ -193,6 +204,17 @@ public partial class @InputPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f90f0b04-bcc4-4d89-85b7-cdf8ebd03e65"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -221,6 +243,17 @@ public partial class @InputPlayer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""45d8a740-e07e-420a-a33e-17e734372e93"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""1d3f9a91-9f62-47fa-a60c-cc8e50a718be"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
@@ -237,6 +270,17 @@ public partial class @InputPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
+                    ""action"": ""SpecialAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af19594d-71c6-4cef-9744-4caba3e50cbf"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
                     ""action"": ""SpecialAbility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -272,7 +316,19 @@ public partial class @InputPlayer: IInputActionCollection2, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Joystick"",
+            ""bindingGroup"": ""Joystick"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Game
         m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
@@ -456,6 +512,15 @@ public partial class @InputPlayer: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+    private int m_JoystickSchemeIndex = -1;
+    public InputControlScheme JoystickScheme
+    {
+        get
+        {
+            if (m_JoystickSchemeIndex == -1) m_JoystickSchemeIndex = asset.FindControlSchemeIndex("Joystick");
+            return asset.controlSchemes[m_JoystickSchemeIndex];
+        }
+    }
     public interface IGameActions
     {
         void OnMovement(InputAction.CallbackContext context);
