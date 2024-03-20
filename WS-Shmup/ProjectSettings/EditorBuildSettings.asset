@@ -6,22 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/UI/UI-MainMenu.unity
+    path: Assets/Scenes/UI-MainMenu.unity
     guid: 227911a6ab7fb7749a414c04b20a09fb
   - enabled: 1
-    path: Assets/UI/UI-Play.unity
+    path: Assets/Scenes/UI-Play.unity
     guid: a135ca77a7b516441b59236d2c52ed21
   - enabled: 1
-    path: Assets/UI/UI-Settings.unity
+    path: Assets/Scenes/UI-Settings.unity
     guid: 600c69feb3721e74bb23f20151536a47
   - enabled: 1
-    path: "Assets/Th\xE9o1/SceneGameInfini.unity"
+    path: Assets/Scenes/SceneGameInfinite.unity
     guid: 6c7cd615886dcc04fa980b46ee8f276e
   - enabled: 1
-    path: "Assets/Th\xE9o1/SceneGameTimer.unity"
+    path: Assets/Scenes/SceneGameTimer.unity
     guid: 186a3c600e0f61144b3b8a5822124f16
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7790b77f36dd72b4b9f08bcae84f7d46, type: 2}
