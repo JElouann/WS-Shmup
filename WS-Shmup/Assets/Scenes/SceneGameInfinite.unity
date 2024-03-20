@@ -2631,6 +2631,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840996570}
   m_CullTransparentMesh: 1
+--- !u!4 &1853490235 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8989856080058739543, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+  m_PrefabInstance: {fileID: 6085455791127960813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1878868493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,17 +2818,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: 34d29064aceb65b479272d9b3b95ebb1, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -3025,6 +3030,14 @@ PrefabInstance:
       propertyPath: _shield
       value: 
       objectReference: {fileID: 14903441}
+    - target: {fileID: 2411816609890223405, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: sockect
+      value: 
+      objectReference: {fileID: 1853490235}
+    - target: {fileID: 2411816609890223405, guid: 41895800d914031438adc34aa1c410f0, type: 3}
+      propertyPath: BulletSpecial
+      value: 
+      objectReference: {fileID: 880167914067651208, guid: b564e91ebb5b81744bc7d670df92144c, type: 3}
     - target: {fileID: 3085672674252432523, guid: 41895800d914031438adc34aa1c410f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

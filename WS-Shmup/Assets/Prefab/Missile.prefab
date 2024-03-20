@@ -232,3 +232,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hp: 50
   ScorePoints: 50
+  _damageColor: {r: 1, g: 0, b: 0, a: 0}

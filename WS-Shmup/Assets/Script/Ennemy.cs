@@ -1,5 +1,3 @@
-using JetBrains.Annotations;
-using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
@@ -17,7 +15,7 @@ public class Ennemy : MonoBehaviour
         score = GameObject.Find("Score").GetComponent<Score>();
     }
 
-    public async virtual void LowerHealth(int damage)
+    public virtual void LowerHealth(int damage)
     {
         if (_hp > 0)
         {
@@ -26,6 +24,7 @@ public class Ennemy : MonoBehaviour
         }
         if (_hp <= 0)
         {
+            StartCoroutine(DamageAnimation());
             Destroy(gameObject);
             score.OnScoreUpdate(ScorePoints);
         }

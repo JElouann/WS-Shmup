@@ -5,7 +5,7 @@ public class RocketBullet : MonoBehaviour
 {
 
     private int _damage = 100;
-    private float _lifeTime = 1;
+    private float _lifeTime = 0.75f;
 
     private void Start()
     {
@@ -14,6 +14,7 @@ public class RocketBullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("AH");
         if (other.gameObject.tag == "Ennemy")
         {
             other.gameObject.SendMessage("LowerHealth", _damage, SendMessageOptions.DontRequireReceiver);

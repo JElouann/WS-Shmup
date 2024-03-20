@@ -95,10 +95,10 @@ public class PlayerHp : MonoBehaviour
         switch (hp)
         {
             case 3:
-                SpriteHealBar2.gameObject.SetActive(true);
+                SpriteHealBar3.gameObject.SetActive(true);
                 break;
             case 2:
-                SpriteHealBar3.gameObject.SetActive(true);
+                SpriteHealBar2.gameObject.SetActive(true);
                 break;
         }
     }

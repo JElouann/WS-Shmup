@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Net.Sockets;
 using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
@@ -21,7 +19,7 @@ public class BossBehaviour : MonoBehaviour
     [Header("System")]
     [SerializeField] private Transform socket;
     [SerializeField] private GameObject _enemyBulletPrefab;
-
+    [SerializeField] private Color _damageColor;
     private GameObject _rotator;
     private Rigidbody2D _rb;
     private GameObject _barrier;
@@ -50,6 +48,7 @@ public class BossBehaviour : MonoBehaviour
         if (!_isBarrierOn)
         {
             _health -= damage;
+            StartCoroutine(DamageAnimation());
             if (_health <= 0)
             {
                 Destroy(this.gameObject);
@@ -104,5 +103,12 @@ public class BossBehaviour : MonoBehaviour
         await Task.Delay(500);
         _shoot = true;
 
+    }
+
+    private IEnumerator DamageAnimation()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().DOColor(_damageColor, 0.1f);
+        yield return new WaitForSeconds(0.1f);
+        this.gameObject.GetComponent<SpriteRenderer>().DOColor(new Color(100, 100, 100, 100), 0.1f);
     }
 }

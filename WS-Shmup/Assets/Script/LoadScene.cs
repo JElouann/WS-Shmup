@@ -26,4 +26,9 @@ public class LoadScene: MonoBehaviour
     {
         SceneManager.LoadScene("UI-Settings");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

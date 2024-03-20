@@ -1,32 +1,36 @@
 using UnityEngine;
-using System.Threading.Tasks;
-using System;
-using static UnityEngine.Rendering.DebugUI;
 
 public class SpecialAbilty : MonoBehaviour
 {
-    [SerializeField] private GameObject _shield;
-    private PlayerHp _playerHp;
+    [SerializeField] private GameObject BulletSpecial;
+    [SerializeField] private Transform sockect;
 
-    private GameObject _player;
+    Score score;
+    private int losepoints = -750;
 
-    private bool _canuseshield = true;
+    private int Points;
 
     private void Start()
     {
-        _player = GameObject.Find("PlayerShip");
-        _playerHp = GameObject.FindObjectOfType<PlayerHp>();
+        score = GameObject.Find("Score").GetComponent<Score>();
+        Points = score.ScoreP;
     }
 
-    private async void OnSpecialAbility()
+    private void OnSpecialAbility()
     {
-        _playerHp.shield = true;
-        if (_canuseshield == true)
+        Points = score.ScoreP;
+        Points += losepoints;
+        Debug.Log(Points);
+
+        if (Points < 0)
         {
-            _shield.SetActive(true);
-            _canuseshield = false;
-            await Task.Delay(7000);
-            _canuseshield = true;
+            Debug.Log("tu ne peux pas tirer");    
+        }
+
+        else if (Points >= 0)
+        {
+            score.OnScoreUpdate(losepoints);
+            Instantiate(BulletSpecial, sockect.position, transform.rotation);
         }
     }
 }
