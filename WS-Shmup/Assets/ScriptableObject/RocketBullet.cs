@@ -14,7 +14,6 @@ public class RocketBullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("AH");
         if (other.gameObject.tag == "Ennemy")
         {
             other.gameObject.SendMessage("LowerHealth", _damage, SendMessageOptions.DontRequireReceiver);

@@ -20,12 +20,8 @@ public class SpecialAbilty : MonoBehaviour
     {
         Points = score.ScoreP;
         Points += losepoints;
-        Debug.Log(Points);
 
-        if (Points < 0)
-        {
-            Debug.Log("tu ne peux pas tirer");    
-        }
+        if (Points < 0){}
 
         else if (Points >= 0)
         {
